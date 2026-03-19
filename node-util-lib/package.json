@@ -1,0 +1,66 @@
+{
+  "name": "@anthropic/node-util-lib",
+  "version": "0.0.1",
+  "description": "Industry-grade Node.js backend utility library",
+  "type": "module",
+  "main": "./dist/node-util-lib.cjs",
+  "module": "./dist/node-util-lib.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/node-util-lib.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/node-util-lib.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run lint && npm run build",
+    "demo": "tsx examples/demo-server/index.ts"
+  },
+  "keywords": [
+    "utility",
+    "backend",
+    "typescript",
+    "library"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@types/express": "^5.0.6",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.1",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "peerDependencies": {
+    "express": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  }
+}
