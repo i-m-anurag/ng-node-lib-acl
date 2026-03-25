@@ -28,7 +28,7 @@
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "husky install",
-    "prepublishOnly": "npm run lint && npm run build",
+    "release": "bash scripts/release.sh",
     "demo": "tsx examples/demo-server/index.ts"
   },
   "keywords": [
@@ -47,6 +47,7 @@
     "@typescript-eslint/parser": "^8.57.1",
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
+    "express": "^5.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",

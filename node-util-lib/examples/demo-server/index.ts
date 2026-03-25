@@ -3,11 +3,15 @@
  * Run with: npm run demo (uses tsx)
  */
 import express from 'express';
-import { ConfigLoader } from '../../src/config/config-loader';
-import { NotFoundError, ValidationError } from '../../src/error-handling/app-error';
-import { Validator } from '../../src/validation/validator';
-import { capitalize, slugify } from '../../src/helpers/string.helper';
-import { HTTP_STATUS } from '../../src/constants/http-status.constants';
+import {
+  ConfigLoader,
+  NotFoundError,
+  ValidationError,
+  Validator,
+  capitalize,
+  slugify,
+  HTTP_STATUS,
+} from '../../dist/node-util-lib.js';
 
 // Initialize config
 const config = new ConfigLoader({
