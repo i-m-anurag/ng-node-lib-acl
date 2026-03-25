@@ -1,0 +1,29 @@
+{
+  "name": "@anthropic/node-util-lib",
+  "version": "1.1.0",
+  "description": "Industry-grade Node.js backend utility library",
+  "type": "module",
+  "main": "./node-util-lib.cjs",
+  "module": "./node-util-lib.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./node-util-lib.js"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./node-util-lib.cjs"
+      }
+    }
+  },
+  "peerDependencies": {
+    "express": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  }
+}
