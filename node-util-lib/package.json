@@ -28,7 +28,7 @@
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "husky install",
-    "release": "bash scripts/release.sh",
+    "release": "node scripts/release.cjs",
     "demo": "tsx examples/demo-server/index.ts"
   },
   "keywords": [
